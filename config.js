@@ -13,7 +13,7 @@ export default {
   // đường dẫn kết quả
   outputPath: "./output/result.txt",
   // đường dẫn kết quả
-  outputLogPath: "./output/resultLog.txt",
+  outputLogPath: "./outputLog/resultLog.txt",
   // file merge
   outputJSONPath: "./output/",
   // từ khóa thêm vào đầu json để biến thành mẫu export default object javascript
