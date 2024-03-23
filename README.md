@@ -18,7 +18,7 @@ npm install
 chạy tool
 
 ```
-node index.js
+npm run serve
 ```
 
 hoặc có thể mở file index.js rồi ấn f5 để chạy ở chế độ debug
