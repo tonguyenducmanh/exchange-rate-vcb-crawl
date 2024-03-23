@@ -1,7 +1,6 @@
 // import thư viện
 import axios from "axios";
 import fs from "fs/promises";
-import JSON5 from "json5";
 
 // import config
 import config from "../config.js";
@@ -19,8 +18,11 @@ export async function crawData() {
     if (startDate && dayEnd) {
       let dayCollection = await getDates(startDate, dayEnd);
       if (dayCollection && dayCollection.length > 0) {
+        // đếm thứ tự thực hiện
+        let count = 0;
         // duyệt qua từng ngày trong mảng và call sang bên Vietcombank lấy dữ liệu về
         for (const currentDay of dayCollection) {
+          count++;
           url = config.sourceDataUrl + currentDay;
 
           // gọi sang ngân hàng lấy dữ liệu
@@ -34,6 +36,12 @@ export async function crawData() {
           }
           // đợi 1 khoảng thời gian rồi mới thực hiện tiếp
           await sleep(config.timeWait);
+          // lưu nhật ký xem chạy được bao nhiêu phần trăm rồi
+          let messageLog = config.logActionSuccess.replace(
+            config.keyReplace,
+            Math.floor((count / dayCollection.length) * 100)
+          );
+          await logFile(messageLog);
         }
       }
     }
