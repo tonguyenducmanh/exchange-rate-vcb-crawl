@@ -35,22 +35,15 @@ export async function logFile(message, methodName) {
 }
 
 /**
- * log thông tin vào file javascript
+ * log thông tin vào file theo output
  * @param {*} result
  * @param {*} output
  */
-export async function logFileJS(result, output) {
+export async function logFileWithOuputPath(result, output) {
   try {
-    await fs.writeFile(
-      output,
-      config.exportDefault +
-        util.inspect(result, { depth: Infinity, compact: false }),
-      (err) => {
-        if (err) throw err;
-      }
-    );
+    await fs.writeFile(output, result);
   } catch (error) {
-    console.log("logFileJS() error: " + error);
+    console.log("logFileWithOuputPath() error: " + error);
   }
 }
 

@@ -16,6 +16,8 @@ export default {
   outputLogPath: "./output/resultLog.txt",
   // file merge
   outputJSONPath: "./output/",
+  // file script gen sẵn
+  outputGenScript: "./output/result.sql",
   // từ khóa thêm vào đầu json để biến thành mẫu export default object javascript
   exportDefault: "export default ",
   logTime: "Thời gian chạy tổng cộng là: {0} phút",

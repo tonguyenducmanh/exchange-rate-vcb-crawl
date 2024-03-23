@@ -30,7 +30,7 @@ async function runTool() {
     );
     await logFile(messageLog);
   } catch (error) {
-    await logFile(error, "runTool");
+    await logFile(error, "index.runTool");
   }
 }
 
