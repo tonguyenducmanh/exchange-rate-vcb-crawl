@@ -9,7 +9,7 @@ export default {
   dayEnd: "2023-03-23",
   outputPath: "./output/result.txt", // đường dẫn kết quả
   outputLogPath: "./output/resultLog.txt", // đường dẫn kết quả
-  outputJSPath: "./output/result.js", // file merge
+  outputJSONPath: "./output/result.json", // file merge
   formatText: "utf-8",
   exportDefault: "export default ", // từ khóa thêm vào đầu json để biến thành mẫu export default object javascript
   logTime: "Thời gian chạy tổng cộng là: {0} phút",
