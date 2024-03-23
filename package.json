@@ -1,0 +1,12 @@
+{
+  "name": "exchange-rate-vcb-crawl",
+  "version": "1.0.0",
+  "description": "Tool thu thập dữ liệu tỷ giá từ Vietcombank",
+  "main": "index.js",
+  "scripts": {
+    "serve": "node index.js"
+  },
+  "author": "Tô Nguyễn Đức Mạnh",
+  "license": "ISC",
+  "type": "module"
+}
