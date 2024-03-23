@@ -14,9 +14,14 @@ async function runTool() {
   try {
     // bắt đầu đo hiệu năng
     let startTime = performance.now();
+
+    // lưu log bắt đầu thực hiện tác vụ
+    await logFile(config.startLog);
+
     // bắt đầu thu thập dữ liệu
     await crawData();
     // kết thúc thu thập dữ liệu
+
     // kết thúc đo hiệu năng
     let endTime = performance.now();
     let messageLog = config.logTime.replace(
