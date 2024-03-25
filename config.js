@@ -4,7 +4,7 @@ export default {
   // url chính để thu thập dữ liệu
   sourceDataUrl: "https://www.vietcombank.com.vn/api/exchangerates?date=",
   // ngày bắt đầu thu thập dữ liệu
-  dayStart: "2024-03-01",
+  dayStart: "2023-03-01",
   // ngày kết thúc thu thập dữ liệu
   dayEnd: "2024-03-23",
   // thời gian đợi sau khi gọi 1 lần để tránh bị chặn ip
