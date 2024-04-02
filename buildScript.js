@@ -62,7 +62,7 @@ async function runTool() {
         let currentDate = exchangeRate.day;
         exchangeRate.data.forEach((item) => {
           if (item && item.currencyCode && item.currencyName) {
-            let tempScript = `insert into ${tableName} (${keyPrimaryColumn}, ${createdDateColumn}, ${currencyCodeColumn}, ${currencyNameColumn}, ${buyColumn}, ${sellColumn}, ${transferColumn}) values ('${uuidv4()}' , '${currentDate}', '${
+            let tempScript = `insert into ${tableName} (${keyPrimaryColumn}, ${createdDateColumn}, ${currencyCodeColumn}, ${currencyNameColumn}, ${buyColumn}, ${sellColumn}, ${transferColumn}) values ('${uuidv4()}' , '${currentDate} 23:59:00', '${
               item.currencyCode
             }', '${item.currencyName}', ${item.cash}, ${item.sell}, ${
               item.transfer
